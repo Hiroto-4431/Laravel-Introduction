@@ -19,6 +19,11 @@
 
 <body>
     <h1>Blade/Index</h1>
+    @if ($msg != '')
+        <p>こんにちは、{{ $msg }}さん。</p>
+    @else
+        <p>何か書いて下さい。</p>
+    @endif
     <p>{{ $msg }}</p>
     <form method="POST" action="/hello">
         @csrf
